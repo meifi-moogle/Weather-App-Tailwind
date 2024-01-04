@@ -1,13 +1,171 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>Weather App!</title>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline text-cyan-500 text-center">
-    Hello world!
-  </h1>
+
+<body class="clear-night-bg text-white font-semibold flex flex-col justify-center items-center">
+
+    <section class="main text-center">
+
+        <div class="location pt-2" data-location-title>Edinburgh</div>
+        <div class="temperature">
+            <span data-current-temp>30</span>&#176
+        </div>
+        <div class="condition" data-condition-description>Sunny</div>
+
+    </section>
+
+
+    <section class="extra-info flex justify-center pt-8">
+        <div class="widgets grid grid-cols-2 gap-4 md:gap-x-16">
+
+            <div
+                class="-[9.5rem] h-20 w-35 bg-indigo-400/10 rounded-lg grid grid-cols-[auto,1fr] items-center justify-center sm:w-[11rem] sm:h-[6rem] md:w-[11rem] md:h-[6rem] max-sm:w-[10rem] max-sm:h-[5rem]">
+                <div class="flex-group flex items-center justify-center space-x-2">
+
+                    <svg class="icon-right" xmlns="http://www.w3.org/2000/svg" width="39" height="39"
+                        viewBox="0 0 36 36">
+                        <path fill="currentColor" d="M19 23.17V11.46h-2V23.2a3 3 0 1 0 2 0Z"
+                            class="clr-i-outline clr-i-outline-path-1" />
+                        <path fill="currentColor"
+                            d="M26 15a1 1 0 0 0 0-2h-2.08v-2H26a1 1 0 0 0 0-2h-2.08V8a6 6 0 0 0-12 0v12.81a8 8 0 1 0 12-.2V19H26a1 1 0 0 0 0-2h-2.08v-2Zm-2 11a6 6 0 1 1-10.36-4.12l.27-.29V8a4 4 0 0 1 8 0v13.44l.3.29A6 6 0 0 1 24 26Z"
+                            class="clr-i-outline clr-i-outline-path-2" />
+                        <path fill="none" d="M0 0h36v36H0z" />
+                    </svg>
+
+                    <div class="info-sub-info info">
+                        <div>Feels like</div>
+                        <p class="sub-info">
+                            <span data-feels-like>30</span><span class="symbol">&#8451</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div
+                class="-[9.5rem] h-20 w-35 bg-indigo-400/10 px-2 rounded-lg grid grid-cols-[auto,1fr] items-center justify-center sm:w-[11rem] sm:h-[6rem] md:w-[11rem] md:h-[6rem] max-sm:w-[10rem] max-sm:h-[5rem]">
+                <div class="flex-group flex items-center justify-center space-x-2"">
+
+                <svg class="icon-right" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5c0-.6.4-1 1-1h1c.6 0 1 .4 1 1s-.4 1-1 1H4c-.6 0-1-.4-1-1m1 8c0-.6.4-1 1-1h1c.6 0 1 .4 1 1s-.4 1-1 1H5c-.6 0-1-.4-1-1m0 3c-.6 0-1 .4-1 1s.4 1 1 1h5c.6 0 1-.4 1-1s-.4-1-1-1H4M18 5c0-.6.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1h-2c-.6 0-1-.4-1-1M7 20c-.6 0-1 .4-1 1s.4 1 1 1h4c.6 0 1-.4 1-1s-.4-1-1-1H7M3 10c-.6 0-1-.4-1-1s.4-1 1-1h9c1.1 0 2-.9 2-2s-.9-2-2-2c-.6 0-1.1.2-1.4.6c-.4.4-1 .4-1.4 0c-.4-.4-.4-1 0-1.4C9.9 2.5 10.9 2 12 2c2.2 0 4 1.8 4 4s-1.8 4-4 4H3m16 2c.6 0 1-.4 1-1s-.4-1-1-1c-.3 0-.5.1-.7.3c-.4.4-1 .4-1.4 0c-.4-.4-.4-1 0-1.4c.5-.6 1.3-.9 2.1-.9c1.7 0 3 1.3 3 3s-1.3 3-3 3h-9c-.6 0-1-.4-1-1s.4-1 1-1h9m-1 6h-5c-.6 0-1-.4-1-1s.4-1 1-1h5c1.7 0 3 1.3 3 3s-1.3 3-3 3c-.8 0-1.6-.3-2.1-.9c-.4-.4-.4-1 0-1.4c.4-.4 1-.4 1.4 0c.2.2.4.3.7.3c.6 0 1-.4 1-1s-.4-1-1-1Z"/></svg>
+
+                    <div class="info-sub-info info">
+                        <div>Wind</div>
+                        <p class="sub-info">
+                            <span data-current-wind>30</span><span class="symbol text-[1.5rem]">mph</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div
+                class="-[9.5rem] h-20 w-35 bg-indigo-400/10 px-2 rounded-lg grid grid-cols-[auto,1fr] items-center justify-center sm:w-[11rem] sm:h-[6rem] md:w-[11rem] md:h-[6rem] max-sm:w-[10rem] max-sm:h-[5rem]">
+                <div class="flex-group flex items-center justify-center space-x-2"">
+
+                <svg class="icon-right" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.5 9C11.5 6.51 7 .5 7 .5S2.5 6.51 2.5 9a4.5 4.5 0 0 0 9 0Z"/></svg>
+
+                    <div class="info-sub-info info">
+                        <div>Humidity</div>
+                        <p class="sub-info">
+                            <span data-current-humidity>30</span><span class="symbol">%</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div
+                class="-[9.5rem] h-20 w-35 bg-indigo-400/10 px-2 rounded-lg grid grid-cols-[auto,1fr] items-center justify-center sm:w-[11rem] sm:h-[6rem] md:w-[11rem] md:h-[6rem] max-sm:w-[10rem] max-sm:h-[5rem]">
+                <div class="flex-group flex items-center justify-center space-x-2"">
+
+                    <svg class="icon-right" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 24 24"><path fill="currentColor" d="M12.5 23q-.625 0-1.063-.425T11 21.525q0-.3.113-.575t.337-.475l.7-.65q.15-.125.35-.125t.35.125l.7.65q.225.2.337.475t.113.575q0 .625-.438 1.05T12.5 23Zm-3.975-2.025Q8.3 20.75 8.3 20.45t.225-.525l1.9-1.9q.225-.225.525-.225t.525.225q.225.225.225.525t-.225.525l-1.9 1.9q-.225.225-.525.225t-.525-.225Zm6.625-1.325l-.8-.8q-.15-.15-.15-.35t.15-.35l.8-.8q.15-.15.35-.15t.35.15l.8.8q.15.15.15.35t-.15.35l-.8.8q-.15.15-.35.15t-.35-.15Zm-7.5-.8l-.8.8q-.15.15-.35.15t-.35-.15l-.8-.8q-.15-.15-.15-.35t.15-.35l.8-.8q.15-.15.35-.15t.35.15l.8.8q.15.15.15.35t-.15.35ZM7.5 16q-2.275 0-3.888-1.613T2 10.5q0-2.075 1.375-3.625t3.4-1.825q.8-1.425 2.188-2.238T12 2q2.25 0 3.913 1.438t2.012 3.587q1.725.15 2.9 1.425T22 11.5q0 1.875-1.312 3.188T17.5 16h-10Zm0-2h10q1.05 0 1.775-.725T20 11.5q0-1.05-.725-1.775T17.5 9H16V8q0-1.65-1.175-2.825T12 4q-1.2 0-2.188.65T8.325 6.4l-.25.6H7.45q-1.425.05-2.437 1.063T4 10.5q0 1.45 1.025 2.475T7.5 14ZM12 9Z"/></svg>
+
+                    <div class="info-sub-info info">
+                        <div>Precip</div>
+                        <p class="sub-info">
+                            <span data-current-precipitation>30</span><span class="symbol">%</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <div class="hourly-section pt-10 pb-4">
+        <div
+            class="h-24 w-[21rem] md:w-[62vw] max-sm:w-[20.8rem] flex items-center justify-between bg-indigo-400/10 xl:bg-indigo-400/0 gap-[1.5rem] rounded-md  overflow-x-auto touch-auto overscroll-x-contain overflow-y-hidden">
+
+            <div class="p-2 text-center flex flex-col gap-2">
+                <div data-hour-one>2pm</div>
+                <p class="">
+                    <span data-temp-hour1>30</span>&#8451
+                </p>
+            </div>
+            <div class="p-2 text-center flex flex-col gap-2">
+                <div data-hour-two>2pm</div>
+                <p class="">
+                    <span data-temp-hour2>30</span>&#8451
+                </p>
+            </div>
+            <div class="p-2 text-center flex flex-col gap-2">
+                <div data-hour-three>2pm</div>
+                <p class="">
+                    <span data-temp-hour3>30</span>&#8451
+                </p>
+            </div>
+            <div class="p-2 text-center flex flex-col gap-2">
+                <div data-hour-four>2pm</div>
+                <p class="">
+                    <span data-temp-hour4>30</span>&#8451
+                </p>
+            </div>
+            <div class="p-2 text-center flex flex-col gap-2">
+                <div data-hour-five>2pm</div>
+                <p class="">
+                    <span data-temp-hour5>30</span>&#8451
+                </p>
+            </div>
+            <div class="p-2 text-center flex flex-col gap-2">
+                <div data-hour-six>2pm</div>
+                <p class="">
+                    <span data-temp-hour6>30</span>&#8451
+                </p>
+            </div>
+            <div class="p-2 text-center flex flex-col gap-2">
+                <div data-hour-seven>2pm</div>
+                <p class="">
+                    <span data-temp-hour7>30</span>&#8451
+                </p>
+            </div>
+            <div class="p-2 text-center flex flex-col gap-2">
+                <div data-hour-eight>2pm</div>
+                <p class="">
+                    <span data-temp-hour8>30</span>&#8451
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="error-msg hidden mb-[-1rem]">No location found :(</div>
+    <div class="pt-4 pb-8">
+        <input type="text" id='city' placeholder="Enter your location...">
+        <button id="search-button" style="display: none;">Click</button>
+    </div>
+
+
 </body>
+
+<script src="app.js"></script>
+
 </html>
