@@ -691,7 +691,7 @@ video {
 html {
   background-color: black;
   color: white;
-  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 100vw;
   overflow: hidden;
 }
