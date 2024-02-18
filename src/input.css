@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +17,9 @@ html {
 @media (width > 765px ) and (width < 1600) { body { transform: scale(1.2); } }
 
 @media (width > 1600px) { body { transform: scale(1.1); } }
-@media (width > 1800px) { body { transform: scale(1.4); } }
+@media (width > 1800px) { body { transform: scale(1.30); } }
+
+body {font-family: 'Poppins', sans-serif;}
 
 
 .location {
@@ -70,3 +73,4 @@ input {
     padding-left: 30px;
     font-weight: 300;
 }
+
