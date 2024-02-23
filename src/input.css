@@ -73,4 +73,6 @@ input {
     padding-left: 30px;
     font-weight: 300;
 }
+button {transition: .2s ease-out;}
+button:active {transform: scale(1.2);}
 
